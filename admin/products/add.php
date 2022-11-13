@@ -7,6 +7,11 @@
                     <span><i class="fa-solid fa-house"></i>Trang chủ</span> <span style="padding: 0 10px; font-size: 22px;">></span> <span><i class="fa-brands fa-product-hunt"></i>Quản lý sản phẩm</span><span style="padding: 0 10px; font-size: 22px;">></span>                    <span>Thêm sản phẩm mới</span>
                 </div>
             </div>
+            <?php if(isset($notification)): ?>
+                <div class="alert alert-success">
+                    <?= $notification ?>
+                </div>
+            <?php endif ?>
             <div class="contentManager--product__footer contentManager--product__footer--addProduct">
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="form--left">
@@ -37,6 +42,15 @@
                                 <?php foreach($listCategories as $value): ?>
                                     <option value="<?= $value['id'] ?>" ><?= $value['name'] ?></option>
                                 <?php endforeach; ?>
+                            </select>
+                            
+                        </div>
+                        <div class="status">
+                            <p>Trạng thái hoạt động:</p>
+                            <select name="status" id="">
+                                <option value="" hidden>-- Chọn trạng thái --</option>
+                                <option value="0">Active</option>
+                                <option value="1">Disable</option>
                             </select>
                             
                         </div>

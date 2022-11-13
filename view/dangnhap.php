@@ -9,7 +9,7 @@
           <a href="">Đăng nhập tài khoản</a>
         </li>
       </ul>
-    </div>
+    </div>  
     <div class="login__top--title-2">
       <p class="title_login--children">Đăng nhập tài khoản</p>
       <p class="title_login--children-2">ĐĂNG NHẬP TÀI KHOẢN</p>
@@ -30,11 +30,11 @@
         <form action="index.php?act=dangnhap" method="post" enctype="multipart/form-data">
           <div>
             <p>Email *</p>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input type="email" name="email" id="email" placeholder="Email" required/>
           </div>
           <div>
             <p>Mật khẩu *</p>
-            <input type="password" name="password" id="password" placeholder="Mật khẩu" />
+            <input type="password" name="password" id="password" placeholder="Mật khẩu" required/>
           </div>
           <div>
             <p class="login__thongbao">
@@ -64,7 +64,7 @@
         <form action="index.php?act=dangnhap" method="post" enctype="multipart/form-data">
           <div>
             <p>Email *</p>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input type="email" name="email" id="email" placeholder="Email" required/>
             <div>
               <span class="login__thongbao">
                 <?= isset($thongbao[1]) ? $thongbao[1] : $thongbao[1] = ''; ?>

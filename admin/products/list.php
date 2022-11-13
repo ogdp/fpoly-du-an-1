@@ -61,18 +61,18 @@
                                 <?= $value['name'] ?>
                             </td>
                             <td class="price">
-                                <?= $value['price'] ?>
+                                <?= number_format($value['price'])."đ" ?>
                             </td>
                             <td class="quantity">
                                 <?= $value['quantity'] ?>
                             </td>
                             <td class="status">
                                 <?php
-                                    if( $value['quantity'] == 0 ){
-                                        echo " <button class='status-empty'>Hết hàng</button>";
+                                    if( $value['status'] == 0 ){
+                                        echo "<button class='status-isset'>Active</button>";
                                         
                                     }else{
-                                        echo "<button class='status-isset'>Còn hàng</button>";
+                                        echo " <button class='status-empty'>Disable</button>";
                                     }
                                 ?>
                             </td>
@@ -80,7 +80,7 @@
                                 <?= $value['created_at'] ?>
                             </td>
                             <td class="btn-action">
-                                <a href="" class="update"><button style="margin-right: 5px;"><i class="fa-solid fa-screwdriver"></i></button></a>
+                                <a href="index.php?actAdmin=editProduct&&id=<?= $value['id'] ?>" class="update"><button style="margin-right: 5px;"><i class="fa-solid fa-screwdriver"></i></button></a>
                                 <a onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm <?= $value['nameProduct'] ?> không?')" href="index.php?actAdmin=deleteProduct&&id=<?= $value['id'] ?>" class="remove"><button><i class="fa-sharp fa-solid fa-trash"></i></button></a>
                             </td>
                         </tr>
@@ -110,3 +110,6 @@
 </div>
 </div>
 <script src="../src/js/animation.js"></script>
+</body>
+
+</html>
