@@ -29,6 +29,7 @@ if (isset($_GET['act'])) {
             require_once "";
             break;
             // Đức làm đăng ký đăng nhập quên mật khẩu
+        // Test thêm code
         case 'dangnhap':
             if (isset($_POST['dangnhap']) == true) {
                 $email_login = $_POST['email_login'];
